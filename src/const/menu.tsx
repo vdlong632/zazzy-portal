@@ -4,45 +4,29 @@ import { DashboardIcon, ProceduresIcon, ProductIcon, SettingIcon, UserIcon } fro
 export type MenuItem = {
   label: string;
   link: string;
-  icon: ReactNode;
+  icon?: ReactNode;
   activeUrls?: string[];
 };
 
-export const ADMIN_MENU: MenuItem[] = [
+export const ROUTE_MENU: MenuItem[] = [
   {
-    label: 'Dashboard',
-    link: '/admin/dashboard',
-    icon: <DashboardIcon />,
-    activeUrls: ['/admin/dashboard']
+    label: 'How It Works',
+    link: '/#how-it-works',
+    activeUrls: ['/#how-it-works']
   },
   {
-    label: 'Users',
-    link: '/admin/users',
-    icon: <UserIcon />,
-    activeUrls: ['/admin/users']
+    label: '2026 Rebates',
+    link: '/#rebate',
+    activeUrls: ['/#rebate']
   },
   {
-    label: 'Clients',
-    link: '/admin/clients',
-    icon: <UserIcon />,
-    activeUrls: ['/admin/clients']
+    label: 'Vendors',
+    link: '/marketplace',
+    activeUrls: ['/marketplace']
   },
   {
-    label: 'Products',
-    link: '/admin/products',
-    icon: <ProductIcon />,
-    activeUrls: ['/admin/products']
-  },
-  {
-    label: 'Procedures',
-    link: '/admin/procedures',
-    icon: <ProceduresIcon />,
-    activeUrls: ['/admin/procedures']
-  },
-  {
-    label: 'Settings',
-    link: '/admin/settings',
-    icon: <SettingIcon />,
-    activeUrls: ['/admin/settings']
+    label: 'Impact',
+    link: '/impact',
+    activeUrls: ['/impact']
   }
 ];

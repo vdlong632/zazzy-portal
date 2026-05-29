@@ -1,5 +1,5 @@
 import { FC, ReactNode, ChangeEvent } from 'react';
-import { styled } from '@mui/material/styles';
+import { styled, SxProps, Theme } from '@mui/material/styles';
 import OutlinedInput, { OutlinedInputProps } from '@mui/material/OutlinedInput';
 import FormHelperText from '@mui/material/FormHelperText';
 import FormControl from '@mui/material/FormControl';
@@ -11,6 +11,7 @@ export type InputProps = {
   value: string;
   type?: string;
   onChange: (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | string | number) => void;
+  onKeyDown?: OutlinedInputProps['onKeyDown'];
   onBlur?: () => void;
   autoComplete?: string;
 };
@@ -29,6 +30,7 @@ type InputTextProps = {
   maxLength?: number;
   colorTitle?: string;
   isAuthScreen?: boolean;
+  sx?: SxProps<Theme>;
 };
 
 /**
@@ -43,16 +45,18 @@ export const InputText: FC<InputTextProps> = ({
   endAdornment,
   colorTitle,
   inputRef,
-  isAuthScreen
+  isAuthScreen,
+  sx,
+  maxLength
 }) => {
   return (
-    <FormControl fullWidth error={!!inputError}>
+    <FormControl fullWidth error={!!inputError} sx={sx}>
       {title && (
         <FormLabel focused={false}>
           <Typography
             sx={{ fontFamily: '"IBM Plex Sans", sans-serif' }}
             lineHeight={isAuthScreen ? '16px' : '20px'}
-            fontSize={isAuthScreen ? 14 : 16}
+            fontSize={isAuthScreen ? 16 : 14}
             mb={1.25}
             fontWeight={isAuthScreen ? 500 : 400}
             color={colorTitle || isAuthScreen ? 'text.secondary' : '#161616'}>
@@ -69,7 +73,8 @@ export const InputText: FC<InputTextProps> = ({
         autoComplete={inputProps?.autoComplete || 'off'}
         endAdornment={endAdornment}
         inputProps={{
-          ref: inputRef
+          ref: inputRef,
+          maxLength
         }}
         placeholder={placeholder}
         startAdornment={startAdornment}
@@ -87,14 +92,14 @@ const InputStyled = styled(OutlinedInput, {
   shouldForwardProp: (prop) => prop !== 'isAuthScreen'
 })<{ isAuthScreen?: boolean }>(({ theme, isAuthScreen }) => ({
   minHeight: 44,
-  fontSize: isAuthScreen ? 14 : 16,
-  borderRadius: 10,
+  fontSize: isAuthScreen ? 16 : 14,
+  borderRadius: 18,
   '& .MuiInputBase-input': {
     padding: '12px',
     color: theme.palette.text.primary,
     '&::placeholder': {
       color: '#16161666',
-      fontFamily: '"Kumbh Sans"',
+      fontFamily: '"DM Sans"',
       fontSize: isAuthScreen ? 14 : 16,
       fontStyle: 'normal',
       fontWeight: 400,
@@ -104,6 +109,6 @@ const InputStyled = styled(OutlinedInput, {
   },
   '.MuiOutlinedInput-notchedOutline': {
     border: isAuthScreen ? `1px solid #16161666` : '1px solid #7B96AD',
-    borderRadius: 10
+    borderRadius: 18
   }
 }));

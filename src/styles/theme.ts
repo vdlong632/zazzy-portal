@@ -3,7 +3,7 @@ import type { Colors } from 'types/theme';
 
 export const themeColors: Colors = {
   base: '#020202',
-  secondary: '#7B96AD',
+  secondary: '#0A2E1F',
   light1: '#686e7d',
   light2: '#8f96a0',
   light3: '#d2d2cf',
@@ -20,7 +20,7 @@ export const themeColors: Colors = {
   red: '#FF4773',
   orange: '#FFAA47',
   blue: '#E3EEF9',
-  white: '#fff'
+  white: 'rgba(247, 243, 234, .93)'
 };
 
 const palette: ThemeOptions['palette'] = {
@@ -57,12 +57,12 @@ const palette: ThemeOptions['palette'] = {
     dark: '#2E6FB3'
   },
   background: {
-    default: '#FFFFFF',
+    default: '#C6F135',
     paper: '#F8F8F8'
   },
   text: {
     primary: '#161616',
-    secondary: '#7B96AD',
+    secondary: '#0A2E1F',
     disabled: '#a9abae'
   },
   divider: '#979797'

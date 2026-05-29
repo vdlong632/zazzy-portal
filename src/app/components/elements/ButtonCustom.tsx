@@ -34,8 +34,9 @@ export const ButtonCustom: FC<CustomButtonProps> = ({
         {label && (
           <Typography
             fontSize={16}
-            fontWeight={500}
-            color={isSecondary ? 'text.primary' : 'common.white'}
+            fontWeight={700}
+            // color={'red'}
+            // color={isSecondary ? 'text.primary' : 'common.white'}
             sx={textSx}>
             {label}
           </Typography>
@@ -64,7 +65,7 @@ export const ButtonOutLine: FC<CustomButtonProps> = ({
           <Typography
             fontSize={16}
             fontWeight={500}
-            color={typeOutline === 'secondary' ? 'text.secondary' : '#020202'}
+            // color={typeOutline === 'secondary' ? 'text.secondary' : '#020202'}
             sx={textSx}>
             {label}
           </Typography>
@@ -80,19 +81,23 @@ const PrimaryButtonStyled = styled(SubmitButton, {
   ({ theme, $buttonDelete, $buttonSecondary }) => ({
     borderRadius: 10,
     padding: '0 20px',
+    fontWeight: 700,
     width: '100%',
-    height: 44,
+    whiteSpace: 'nowrap',
     background: $buttonDelete
       ? theme.palette.error.main
       : $buttonSecondary
         ? theme.palette.info.light
         : theme.palette.text.secondary,
     '&:hover': {
-      backgroundColor: $buttonDelete
-        ? theme.palette.error.dark
-        : $buttonSecondary
-          ? theme.palette.info.light
-          : theme.palette.text.secondary
+      // backgroundColor: $buttonDelete
+      //   ? theme.palette.error.dark
+      //   : $buttonSecondary
+      //     ? theme.palette.info.light
+      //     : theme.palette.text.secondary,
+      backgroundColor: '#1B5E3B',
+      transform: 'translateY(-1px)',
+      boxShadow: '0 4px 20px rgba(10,46,31,.25)'
     },
     '&.Mui-disabled': {
       opacity: 0.6
@@ -103,14 +108,18 @@ const PrimaryButtonStyled = styled(SubmitButton, {
 const PrimaryButtonOutLine = styled(SubmitButton, {
   shouldForwardProp: (prop) => !String(prop).startsWith('$')
 })<{ $typeOutline?: string }>(({ theme, $typeOutline }) => ({
-  borderRadius: 10,
+  borderRadius: 100,
   width: '100%',
-  height: 44,
+  whiteSpace: 'nowrap',
   background: 'transparent',
-  border: `1px solid ${$typeOutline === 'black' ? '#020202' : theme.palette.text.secondary}`,
+  // border: `1px solid ${$typeOutline === 'black' ? '#020202' : theme.palette.text.secondary}`,
+  border: '1.5px solid #E5DFC8',
   '&:hover': {
-    backgroundColor: theme.palette.action.hover,
-    border: `1px solid ${$typeOutline === 'black' ? '#020202' : theme.palette.text.secondary}`
+    borderColor: '#0A2E1F',
+    backgroundColor: '#0A2E1F',
+    color: '#C6F135'
+    // backgroundColor: theme.palette.action.hover,
+    // border: `1px solid ${$typeOutline === 'black' ? '#020202' : theme.palette.text.secondary}`
   },
   '&.Mui-disabled': {
     opacity: 0.6
