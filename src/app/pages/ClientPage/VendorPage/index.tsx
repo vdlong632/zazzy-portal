@@ -8,8 +8,8 @@ export const VendorPage = () => {
 
   return (
     <Stack>
-      <VectorHeading/>
-      <VectorGridSection vendors={vendors}/>
+      <VectorHeading />
+      <VectorGridSection vendors={vendors} />
     </Stack>
   );
 };

@@ -1,7 +1,3 @@
-
-
 export const InformationForm = () => {
-    return (
-        <></>
-    )
-}
+  return <></>;
+};

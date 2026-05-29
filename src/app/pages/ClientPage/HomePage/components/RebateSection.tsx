@@ -8,7 +8,7 @@ type Props = {
 export const RebateSection = ({ rebates }: Props) => {
   // const { rebates, loading, error } = useHomePage();
   return (
-    <SectionSwapper id='rebate'>
+    <SectionSwapper id="rebate">
       <Stack sx={{ margin: '0 40px' }}>
         <Typography
           sx={{
@@ -30,7 +30,7 @@ export const RebateSection = ({ rebates }: Props) => {
             fontFamily: 'Syne, sans-serif',
             width: '70%',
             lineHeight: 1,
-            marginBottom: '14px',
+            marginBottom: '14px'
             // md: {fontSize: 'clamp(30px,4.5vw,54px)'}
           }}>
           Every rebate available now.
@@ -82,14 +82,14 @@ export const RebateSection = ({ rebates }: Props) => {
   );
 };
 
-const SectionSwapper = styled(Stack)(({theme}) => ({
+const SectionSwapper = styled(Stack)(({ theme }) => ({
   width: '100%',
   height: 'auto',
   padding: '88px 40px',
   backgroundColor: '#F7F3EA',
   [theme.breakpoints.up('xs')]: {
     padding: '88px 0'
-  },
+  }
 }));
 
 const CardSwapper = styled(Stack)(() => ({

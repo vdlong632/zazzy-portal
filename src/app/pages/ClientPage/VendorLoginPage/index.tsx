@@ -3,11 +3,11 @@ import { LoginForm } from './components/LoginForm';
 
 export const VendorLoginPage = () => {
   const handleSubmitForm = () => {
-    console.log('Login Success')
-  }
+    console.log('Login Success');
+  };
   return (
     <PageWrapper>
-      <LoginForm onSubmit={handleSubmitForm}/>
+      <LoginForm onSubmit={handleSubmitForm} />
     </PageWrapper>
   );
 };

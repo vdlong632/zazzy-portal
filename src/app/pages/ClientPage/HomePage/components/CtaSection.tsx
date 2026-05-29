@@ -23,7 +23,7 @@ export const CtaSection = () => {
         textSx={{
           fontFamily: 'Syne, sans-serif',
           fontSize: '15px',
-          color: '#C6F135',
+          color: '#C6F135'
         }}
         sx={{
           padding: '16px 42px',

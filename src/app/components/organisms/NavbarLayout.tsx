@@ -20,7 +20,12 @@ export const NavbarLayout = ({ children }: LayoutProps) => {
         <NavbarActions />
         <ButtonOutLine
           label="X"
-          sx={{ display: { md: 'none', xs: 'flex' }, width: 'fit-content', height: '35px', padding: '0px' }}
+          sx={{
+            display: { md: 'none', xs: 'flex' },
+            width: 'fit-content',
+            height: '35px',
+            padding: '0px'
+          }}
         />
       </WrapperNavbar>
       <MainContent sx={{ paddingTop: { xs: '62px', md: '62px' } }}>{children}</MainContent>

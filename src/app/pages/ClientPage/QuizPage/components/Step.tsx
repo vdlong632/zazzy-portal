@@ -9,7 +9,13 @@ export const Step = ({ step, totalStep }: Props) => {
   const progress = Math.ceil((step / totalStep) * 100);
   return (
     <Stack>
-      <Stack sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginBottom: '8px' }}>
+      <Stack
+        sx={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          marginBottom: '8px'
+        }}>
         <ProgressRow fontSize={'12px'}>
           Step {step} of {totalStep}
         </ProgressRow>
@@ -27,7 +33,7 @@ export const Step = ({ step, totalStep }: Props) => {
 const ProgressRow = styled(Typography)(() => ({
   fontSize: '12px',
   color: '#4A5248',
-  fontWeight: 600,
+  fontWeight: 600
 }));
 const StepTitle = styled(Stack)(() => ({
   fontSize: '34px',

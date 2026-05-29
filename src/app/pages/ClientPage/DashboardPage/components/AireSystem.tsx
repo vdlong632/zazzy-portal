@@ -17,7 +17,13 @@ export const AireSystem = () => {
           }}>
           Peak Aire Systems Dashboard
         </Typography>
-        <Typography sx={{ fontSize: '12px', color: 'rgba(247,243,234,.45)', marginTop: '2px', fontFamily: 'DM Sans, sans-serif' }}>
+        <Typography
+          sx={{
+            fontSize: '12px',
+            color: 'rgba(247,243,234,.45)',
+            marginTop: '2px',
+            fontFamily: 'DM Sans, sans-serif'
+          }}>
           NRCan Certified ✓ · ENMAX Partner ✓ · Subscription Active · Trial ends in 18 days
         </Typography>
       </Stack>
@@ -27,10 +33,7 @@ export const AireSystem = () => {
           textSx={{ color: 'rgba(247,243,234,.65)' }}
           onClick={() => navigate('/')}
         />
-        <ButtonOutLine
-          label="Sign Out"
-          textSx={{ color: 'rgba(247,243,234,.65)' }}
-        />
+        <ButtonOutLine label="Sign Out" textSx={{ color: 'rgba(247,243,234,.65)' }} />
       </Stack>
     </WrapStyled>
   );

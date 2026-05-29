@@ -15,9 +15,9 @@ export const HomePage = () => {
       <HeroSection />
       <Co2Bar />
       <HowItWorksSection />
-      <RebateSection rebates={rebates}/>
-      <CtaSection/>
-      <Footer/>
+      <RebateSection rebates={rebates} />
+      <CtaSection />
+      <Footer />
     </PageWrapper>
   );
 };

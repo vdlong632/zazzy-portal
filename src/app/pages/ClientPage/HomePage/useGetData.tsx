@@ -11,7 +11,7 @@ export const useGetData = () => {
     try {
       setLoading(true);
       setError('');
-    //   await new Promise((resolve) => setTimeout(resolve, 500));
+      //   await new Promise((resolve) => setTimeout(resolve, 500));
 
       setRebates(MOCK_REBATES);
     } catch {

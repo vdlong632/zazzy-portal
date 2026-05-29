@@ -109,7 +109,7 @@ export const VectorGridSection = ({ vendors }: Props) => {
                 textSx={{
                   color: '#C6F135',
                   fontFamily: 'Syne, sans-serif',
-                  fontSize: '12px',
+                  fontSize: '12px'
                 }}
                 onClick={() => {
                   navigate('/quiz');
@@ -163,7 +163,7 @@ export const VectorGridSection = ({ vendors }: Props) => {
               textSx={{
                 color: '#C6F135',
                 fontFamily: 'Syne, sans-serif',
-                fontSize: '12px',
+                fontSize: '12px'
               }}
               onClick={() => {
                 navigate('/vendor-login');

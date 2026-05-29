@@ -79,7 +79,8 @@ export const ImpactBody = () => {
                 }}>
                 {item.value}
               </Typography>
-              <Typography sx={{ fontSize: '11px', color: '#4A5248', marginTop: '3px', textWrap: 'nowrap'}}>
+              <Typography
+                sx={{ fontSize: '11px', color: '#4A5248', marginTop: '3px', textWrap: 'nowrap' }}>
                 {item.detail}
               </Typography>
             </CardStyled>

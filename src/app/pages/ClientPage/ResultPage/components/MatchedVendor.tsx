@@ -1,7 +1,3 @@
-
-
 export const MatchedVendor = () => {
-    return (
-        <></>
-    )
-}
+  return <></>;
+};

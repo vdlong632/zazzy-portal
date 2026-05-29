@@ -8,11 +8,9 @@ export const ResultPage = () => {
   return (
     <Stack bgcolor={'#EEEEE9'}>
       <HeroSection />
-      <Grid container spacing={'28px'} 
-      sx={{padding: '44px 40px'}}
-      >
+      <Grid container spacing={'28px'} sx={{ padding: '44px 40px' }}>
         <Grid item xs={6} md={7.5}>
-            <ResultSection />
+          <ResultSection />
         </Grid>
         <Grid item xs={6} md={4.5}>
           <MatchedVendor />
@@ -20,7 +18,7 @@ export const ResultPage = () => {
         </Grid>
       </Grid>
     </Stack>
-);
+  );
 };
 
 // sx={{

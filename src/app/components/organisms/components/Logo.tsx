@@ -13,9 +13,12 @@ export const Logo = () => {
         display="flex"
         alignItems="center"
         justifyContent="center"
-        borderRadius="7px"
-      >
-        <Typography fontSize="12px" color="#C6F135" fontWeight={800} fontFamily={'Syne, sans-serif'}>
+        borderRadius="7px">
+        <Typography
+          fontSize="12px"
+          color="#C6F135"
+          fontWeight={800}
+          fontFamily={'Syne, sans-serif'}>
           ZG
         </Typography>
       </Box>

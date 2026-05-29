@@ -51,6 +51,6 @@ const TitleHeading = styled(Typography)(() => ({
 }));
 
 const TextStyled = styled('em')(() => ({
-    color: '#C6F135',
-    fontStyle: 'normal'
-}))
+  color: '#C6F135',
+  fontStyle: 'normal'
+}));

@@ -12,7 +12,7 @@ export const Step4 = memo(() => {
     setError,
     formState: { errors }
   } = useFormContext<TypeMultiForm>();
-  console.log(watch('step4.averageBill'))
+  console.log(watch('step4.averageBill'));
   return (
     <Stack flex={1} alignItems={'center'}>
       <SliderBox>
@@ -30,7 +30,7 @@ export const Step4 = memo(() => {
           name="step4.averageBill"
           render={({ field }) => (
             <SliderCustom
-            value={field.value ?? 50}
+              value={field.value ?? 50}
               defaultValue={50}
               min={50}
               max={800}

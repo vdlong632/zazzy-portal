@@ -7,7 +7,7 @@ export const HeroSection = () => {
       <HeroContent>
         <HeroPill>2026 Calgary Rebates — Verified May 2026</HeroPill>
 
-        <HeroTitle sx={{width: '89%', lineHeight: .92}} fontFamily={'Syne, sans-serif'}>
+        <HeroTitle sx={{ width: '89%', lineHeight: 0.92 }} fontFamily={'Syne, sans-serif'}>
           Enter your postcode.
           <br />
           <span>See your rebates.</span>
@@ -16,8 +16,8 @@ export const HeroSection = () => {
         </HeroTitle>
 
         <HeroSubtitle>
-          340,000 Calgary buildings have unclaimed energy rebates averaging $8,400.
-          No one tells you. We do — then we connect you with a vendor who delivers it.
+          340,000 Calgary buildings have unclaimed energy rebates averaging $8,400. No one tells
+          you. We do — then we connect you with a vendor who delivers it.
         </HeroSubtitle>
 
         <LookupBox />
@@ -61,15 +61,15 @@ const HeroPill = styled(Box)(() => ({
   marginBottom: 24
 }));
 
-const HeroTitle = styled(Typography)(({theme}) => ({
+const HeroTitle = styled(Typography)(({ theme }) => ({
   fontSize: 'clamp(42px, 8vw, 92px)',
   fontWeight: 800,
   color: '#FDFCF8',
   lineHeight: 0.95,
   letterSpacing: '-.04em',
   marginBottom: 18,
-   [theme.breakpoints.up('xs')]: {
-    fontSize: 'clamp(46px, 8vw, 104px)',
+  [theme.breakpoints.up('xs')]: {
+    fontSize: 'clamp(46px, 8vw, 104px)'
   },
 
   '& span': {

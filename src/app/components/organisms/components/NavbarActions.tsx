@@ -16,7 +16,7 @@ export const NavbarActions = () => {
           padding: '8px 18px',
           background: 'none',
           border: '1.5px solid ##E5DFC8',
-          display: { xs: 'none', md: 'flex' },
+          display: { xs: 'none', md: 'flex' }
         }}
       />
       <ButtonCustom

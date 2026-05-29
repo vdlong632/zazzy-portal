@@ -5,7 +5,7 @@ import { useFormContext } from 'react-hook-form';
 import { TypeMultiForm } from '../type';
 
 export const Step2 = memo(() => {
-const {
+  const {
     control,
     watch,
     setValue,
@@ -69,5 +69,5 @@ const ItemSwap = styled(Stack)(() => ({
   borderRadius: '18px',
   cursor: 'pointer',
   transition: 'all .18s',
-  textAlign: 'left',
+  textAlign: 'left'
 }));

@@ -12,7 +12,7 @@ export const Step5 = memo(() => {
     setError,
     formState: { errors }
   } = useFormContext<TypeMultiForm>();
-  
+
   return (
     <Stack flex={1} alignItems={'center'}>
       <Stack>
