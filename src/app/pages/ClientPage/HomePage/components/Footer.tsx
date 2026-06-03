@@ -89,7 +89,6 @@ const FooterSwagger = styled(Stack)(() => ({
   backgroundColor: '#0a2e1f'
 }));
 
-
 const HeadingTitle = styled(Typography)(() => ({
   fontSize: '12px',
   fontWeight: 700,
@@ -115,7 +114,7 @@ const ItemStyled = styled('a')(() => ({
   }
 }));
 
-const FooterBottom = styled(Box)(({theme}) => ({
+const FooterBottom = styled(Box)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
@@ -123,7 +122,7 @@ const FooterBottom = styled(Box)(({theme}) => ({
   maxWidth: '1200px',
   fontSize: '12px',
   color: 'rgba(247,243,234,.22)',
-  [theme.breakpoints.down('sm')] : {
+  [theme.breakpoints.down('sm')]: {
     flexDirection: 'column'
   }
 }));

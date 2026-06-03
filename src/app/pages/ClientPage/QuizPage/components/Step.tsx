@@ -7,7 +7,7 @@ type Props = {
 };
 export const Step = ({ step, totalStep }: Props) => {
   const progress = Math.ceil((step / totalStep) * 100);
-  console.log(step)
+  console.log(step);
   return (
     <Stack>
       <Stack
@@ -49,7 +49,7 @@ const StepDesc = styled(Stack)(() => ({
   fontSize: '14px',
   color: '#4A5248',
   marginBottom: '26px',
-  lineHeight: 1.6,
+  lineHeight: 1.6
 }));
 
 const BarStep = styled(Stack)(() => ({

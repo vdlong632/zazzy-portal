@@ -60,7 +60,7 @@ export const InputText: FC<InputTextProps> = ({
             mb={1.25}
             fontWeight={isLookUp ? 500 : 400}
             // color={colorTitle || isLookUp ? 'text.secondary' : '#161616'}
-            >
+          >
             {title}
           </Typography>
         </FormLabel>

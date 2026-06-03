@@ -176,7 +176,7 @@ export const VectorGridSection = ({ vendors }: Props) => {
   );
 };
 
-const Swapper = styled(Stack)(({theme}) => ({
+const Swapper = styled(Stack)(({ theme }) => ({
   padding: '44px 40px',
   maxWidth: '1180px',
   margin: '0 auto',

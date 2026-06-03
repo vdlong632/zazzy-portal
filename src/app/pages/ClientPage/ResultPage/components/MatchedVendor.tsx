@@ -28,7 +28,7 @@ export const MatchedVendor = () => {
           <LogoStyled>{item.logo}</LogoStyled>
           <Stack>
             <Stack sx={{ fontSize: '13px', fontWeight: 600 }}>{item.name}</Stack>
-            <Stack sx={{ fontSize: '11px'}}>{item.badges}</Stack>
+            <Stack sx={{ fontSize: '11px' }}>{item.badges}</Stack>
           </Stack>
           <RatingStyled>{item.rating.average}★</RatingStyled>
         </Stack>

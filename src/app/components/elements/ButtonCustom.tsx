@@ -95,8 +95,8 @@ const PrimaryButtonStyled = styled(SubmitButton, {
       transform: isForm ? 'translateY(-2px)' : 'translateY(-1px)',
       boxShadow: isForm ? '0 6px 24px rgba(191, 241, 53, 0.35)' : '0 4px 20px rgba(10,46,31,.25)',
       '& .MuiTypography-root': {
-color: isForm ? '#0A2E1F' : '#C6F135',
-    // backgroundColor: isForm ? '#C6F135' : '#0A2E1F',
+        color: isForm ? '#0A2E1F' : '#C6F135'
+        // backgroundColor: isForm ? '#C6F135' : '#0A2E1F',
       }
     },
     '&.Mui-disabled': {

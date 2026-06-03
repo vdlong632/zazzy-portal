@@ -109,7 +109,7 @@ export const HowItWorksSection = () => {
   );
 };
 
-const SectionSwapper = styled(Stack)(({theme}) => ({
+const SectionSwapper = styled(Stack)(({ theme }) => ({
   width: '100%',
   height: 'auto',
   padding: '88px 40px',
@@ -119,7 +119,7 @@ const SectionSwapper = styled(Stack)(({theme}) => ({
   }
 }));
 
-const CardSwapper = styled(Stack)(({theme}) => ({
+const CardSwapper = styled(Stack)(({ theme }) => ({
   // minHeight: '280px',
   minHeight: '100%',
   padding: '30px',
@@ -131,7 +131,7 @@ const CardSwapper = styled(Stack)(({theme}) => ({
 
   '&:hover': {
     transform: 'translateY(-4px)',
-    boxShadow: '0 8px 48px rgba(10,46,31,.13)',
+    boxShadow: '0 8px 48px rgba(10,46,31,.13)'
   },
   [theme.breakpoints.down('sm')]: {
     height: 'fit-content'

@@ -34,7 +34,10 @@ export const NavbarLayout = ({ children }: LayoutProps) => {
         {TOGGLE_MENU.map((item, index) => {
           return (
             <NavLink key={index} to={item.link} style={{ textDecoration: 'none' }}>
-              <MenuItem onClick={() => {setOpen(!open)}}>
+              <MenuItem
+                onClick={() => {
+                  setOpen(!open);
+                }}>
                 <Typography
                   className="label"
                   sx={{
@@ -55,7 +58,7 @@ export const NavbarLayout = ({ children }: LayoutProps) => {
   );
 };
 
-const WrapperNavbar = styled(Stack)(({theme}) => ({
+const WrapperNavbar = styled(Stack)(({ theme }) => ({
   width: '100%',
   height: '62px',
   backgroundColor: 'rgba(247,243,234,.93)',

@@ -41,7 +41,7 @@ export const VendorStatus = () => {
   );
 };
 
-const Swapper = styled(Stack)(({theme}) => ({
+const Swapper = styled(Stack)(({ theme }) => ({
   padding: '26px 40px',
   backgroundColor: '#FDFCF8',
   [theme.breakpoints.down('sm')]: {

@@ -5,12 +5,12 @@ import { ActiveLeads } from './components/ActiveLeads';
 import { useGetLeads } from './useGetLeads';
 
 export const DashboardPage = () => {
-  const {leads} = useGetLeads();
+  const { leads } = useGetLeads();
   return (
     <WrapSection>
       <AireSystem />
       <VendorStatus />
-      <ActiveLeads leads={leads}/>
+      <ActiveLeads leads={leads} />
     </WrapSection>
   );
 };

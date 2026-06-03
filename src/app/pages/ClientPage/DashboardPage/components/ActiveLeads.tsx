@@ -86,7 +86,7 @@ export const ActiveLeads = ({ leads }: Props) => {
                   <ButtonOutLine
                     label="Details"
                     textSx={{ fontSize: '11px', fontWeight: 600, color: '#4A5248', lineHeight: 1 }}
-                    sx={{padding: '7px 14px'}}
+                    sx={{ padding: '7px 14px' }}
                   />
                 </Stack>
               )}
@@ -131,10 +131,10 @@ const LeadsItem = styled(Stack)(({ theme }) => ({
   [theme.breakpoints.down('sm')]: {
     display: 'flex',
     flexDirection: 'column'
-},
-[theme.breakpoints.down('md')]: {
-  gridTemplateColumns: '1fr 1fr'
-}
+  },
+  [theme.breakpoints.down('md')]: {
+    gridTemplateColumns: '1fr 1fr'
+  }
 }));
 
 const BadgeStyled = styled(Stack)(() => ({

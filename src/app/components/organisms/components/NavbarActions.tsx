@@ -10,7 +10,12 @@ export const NavbarActions = () => {
       <ButtonOutLine
         label={'Vendor Login'}
         onClick={() => navigate('/vendor-login')}
-        textSx={{ fontSize: '13px', fontWeight: 600, color: '#0A2E1F', fontFamily: 'DM Sans, sans-serif' }}
+        textSx={{
+          fontSize: '13px',
+          fontWeight: 600,
+          color: '#0A2E1F',
+          fontFamily: 'DM Sans, sans-serif'
+        }}
         sx={{
           height: '35px',
           padding: '8px 18px',

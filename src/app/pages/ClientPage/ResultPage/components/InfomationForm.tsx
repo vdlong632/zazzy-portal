@@ -14,8 +14,8 @@ export const InformationForm = ({ disabled = false }: FormProps) => {
       <Stack bgcolor={'#0A2E1F'} padding={'22px'} borderRadius={'26px'}>
         <HeadingForm>Claim Your Report</HeadingForm>
         <SubTitle>
-          Enter your details to receive your full report and get connected with your 3
-          matched vendors.
+          Enter your details to receive your full report and get connected with your 3 matched
+          vendors.
         </SubTitle>
         <Stack sx={{ display: 'flex', gap: '9px', marginBottom: '9px' }}>
           <InputText placeholder="First name" />
@@ -46,6 +46,6 @@ const SubTitle = styled(Typography)(() => ({
   fontSize: '13px',
   color: 'rgba(247, 243, 234, .55)',
   marginBottom: '16px',
-  lineHeight: 1.5,
+  lineHeight: 1.5
   // wordWrap: 'break-word'
 }));
