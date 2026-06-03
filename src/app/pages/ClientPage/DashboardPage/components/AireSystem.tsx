@@ -39,11 +39,20 @@ export const AireSystem = () => {
   );
 };
 
-const WrapStyled = styled(Stack)(() => ({
+const WrapStyled = styled(Stack)(({theme}) => ({
   padding: '26px 40px',
   backgroundColor: '#0A2E1F',
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
-  justifyContent: 'space-between'
+  justifyContent: 'space-between',
+  gap: '14px',
+  [theme.breakpoints.down('sm')]: {
+    padding: '26px 20px',
+  }, 
+  '@media (max-width:800px)': {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start'
+  }
 }));

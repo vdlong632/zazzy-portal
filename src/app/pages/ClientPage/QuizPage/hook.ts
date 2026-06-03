@@ -19,24 +19,24 @@ export const useMultiForm = () => {
     }
   });
   const step = methods.watch('step');
-  console.log('step', step);
+  // console.log('step', step);
 
   const handleBack = () => {
     const currentStep = methods.getValues('step');
-    // console.log('1234', currentStep)
+    // console.log('abc', currentStep)
 
     if (currentStep === 1) {
       navigate(-1);
       return;
     } else if (currentStep > 1) {
       methods.setValue('step', currentStep - 1);
-      console.log('1234', currentStep);
     }
   };
 
   const handleNext = () => {
     const currentStep = methods.getValues('step');
     // console.log('abc', currentStep)
+
     if (currentStep === 6) {
       navigate(-1);
       return;

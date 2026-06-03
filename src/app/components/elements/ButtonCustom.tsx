@@ -13,6 +13,7 @@ type CustomButtonProps = {
   isDelete?: boolean;
   iconStart?: ReactNode;
   textSx?: SxProps<Theme>;
+  isForm?: boolean;
 } & ButtonProps &
   SubmitButtonProps;
 
@@ -25,6 +26,7 @@ export const ButtonCustom: FC<CustomButtonProps> = ({
   isSecondary,
   iconStart,
   textSx,
+  isForm,
   ...props
 }) => {
   return (
@@ -33,8 +35,9 @@ export const ButtonCustom: FC<CustomButtonProps> = ({
         {iconStart && iconStart}
         {label && (
           <Typography
-            fontSize={16}
+            // fontSize={16}
             fontWeight={700}
+            fontFamily={isForm ? 'Syne, sans-serif' : 'DM Sans'}
             // color={'red'}
             // color={isSecondary ? 'text.primary' : 'common.white'}
             sx={textSx}>
@@ -77,27 +80,24 @@ export const ButtonOutLine: FC<CustomButtonProps> = ({
 };
 const PrimaryButtonStyled = styled(SubmitButton, {
   shouldForwardProp: (prop) => !String(prop).startsWith('$')
-})<{ $buttonDelete?: boolean; $buttonSecondary?: boolean }>(
-  ({ theme, $buttonDelete, $buttonSecondary }) => ({
+})<{ $buttonDelete?: boolean; $buttonSecondary?: boolean; isForm?: boolean }>(
+  ({ theme, $buttonDelete, $buttonSecondary, isForm }) => ({
     borderRadius: 10,
     padding: '0 20px',
     fontWeight: 700,
     width: '100%',
     whiteSpace: 'nowrap',
-    background: $buttonDelete
-      ? theme.palette.error.main
-      : $buttonSecondary
-        ? theme.palette.info.light
-        : theme.palette.text.secondary,
+    // color: isForm ? '#0A2E1F' : '#C6F135',
+    backgroundColor: isForm ? '#C6F135' : '#0A2E1F',
     '&:hover': {
-      // backgroundColor: $buttonDelete
-      //   ? theme.palette.error.dark
-      //   : $buttonSecondary
-      //     ? theme.palette.info.light
-      //     : theme.palette.text.secondary,
-      backgroundColor: '#1B5E3B',
-      transform: 'translateY(-1px)',
-      boxShadow: '0 4px 20px rgba(10,46,31,.25)'
+      // color: isForm ? '#1B5E3B' : '#C6F135',
+      backgroundColor: isForm ? '#C6F135' : '#1B5E3B',
+      transform: isForm ? 'translateY(-2px)' : 'translateY(-1px)',
+      boxShadow: isForm ? '0 6px 24px rgba(191, 241, 53, 0.35)' : '0 4px 20px rgba(10,46,31,.25)',
+      '& .MuiTypography-root': {
+color: isForm ? '#0A2E1F' : '#C6F135',
+    // backgroundColor: isForm ? '#C6F135' : '#0A2E1F',
+      }
     },
     '&.Mui-disabled': {
       opacity: 0.6
@@ -117,7 +117,9 @@ const PrimaryButtonOutLine = styled(SubmitButton, {
   '&:hover': {
     borderColor: '#0A2E1F',
     backgroundColor: '#0A2E1F',
-    color: '#C6F135'
+    '& .MuiTypography-root': {
+      color: '#C6F135'
+    }
     // backgroundColor: theme.palette.action.hover,
     // border: `1px solid ${$typeOutline === 'black' ? '#020202' : theme.palette.text.secondary}`
   },

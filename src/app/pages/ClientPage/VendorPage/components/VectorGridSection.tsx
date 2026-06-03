@@ -176,11 +176,14 @@ export const VectorGridSection = ({ vendors }: Props) => {
   );
 };
 
-const Swapper = styled(Stack)(() => ({
+const Swapper = styled(Stack)(({theme}) => ({
   padding: '44px 40px',
   maxWidth: '1180px',
   margin: '0 auto',
-  width: '100%'
+  width: '100%',
+  [theme.breakpoints.down('sm')]: {
+    padding: '44px 20px'
+  }
 }));
 
 const CardStyled = styled(Stack)(() => ({

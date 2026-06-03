@@ -30,3 +30,11 @@ export const ROUTE_MENU: MenuItem[] = [
     activeUrls: ['/impact']
   }
 ];
+
+export const TOGGLE_MENU: MenuItem[] = [
+  { label: 'How It Works', link: '/#how-it-works' },
+  { label: '2026 Rebates', link: '/#rebate' },
+  { label: 'Vendor Directory', link: '/marketplace' },
+  { label: 'Vendor Login', link: '/vendor-login' },
+  { label: 'Find My Rebates →', link: '/quiz' }
+];

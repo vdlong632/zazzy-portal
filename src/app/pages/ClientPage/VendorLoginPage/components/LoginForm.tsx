@@ -20,8 +20,6 @@ export const LoginForm = ({ onSubmit }: FormLoginProps) => {
     watch,
     formState: { errors }
   } = useForm<FormLoginType>({ resolver: zodResolver(loginSchema) });
-  const email = watch('email');
-  console.log(email);
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <FormSwapper>
@@ -61,20 +59,22 @@ export const LoginForm = ({ onSubmit }: FormLoginProps) => {
           Sign in to manage your leads, track deals, and view your performance dashboard.
         </Typography>
         <InputText
+          isVendor
           placeholder="Email address"
-          sx={{ marginBottom: '9px', borderRadius: '100px' }}
           inputError={errors.email?.message}
           inputProps={{
             ...register('email')
           }}
+          sx={{ marginBottom: '9px' }}
         />
         <InputText
+          isVendor
           placeholder="Password"
-          sx={{ marginBottom: '9px', borderRadius: '100px' }}
           inputError={errors.password?.message}
           inputProps={{
             ...register('password')
           }}
+          sx={{ marginBottom: '9px' }}
         />
         <ButtonCustom
           type="submit"

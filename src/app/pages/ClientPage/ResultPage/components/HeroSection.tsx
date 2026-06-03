@@ -15,7 +15,8 @@ const TitleReport = styled(Typography)(() => ({
   fontSize: '11px',
   color: 'rgba(198,241,53,.55)',
   fontWeight: 700,
-  textTransform: 'uppercase'
+  textTransform: 'uppercase',
+  marginBottom: '9px'
 }));
 
 const ReportTotal = styled(Typography)(() => ({
@@ -30,7 +31,8 @@ const TotalLabel = styled(Typography)(() => ({
   fontSize: '16px',
   color: 'rgba(247,243,234,.55)',
   marginTop: '9px',
-  animation: 'fu .6s .08s ease both'
+  fontFamily: 'DM Sans, sans-serif'
+  // animation: 'fu .6s .08s ease both'
 }));
 
 const TextStyled = styled(Stack)(() => ({

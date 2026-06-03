@@ -73,7 +73,7 @@ export const HowItWorksSection = () => {
 
         <Grid container spacing="22px" alignItems="stretch">
           {STEP.map((step, index) => (
-            <Grid item xs={6} md={4} key={step.id}>
+            <Grid item xs={12} sm={6} md={4} key={step.id}>
               <CardSwapper bgcolor={step.bgColor || '#eeeee9'}>
                 <StepStyled color={step.stepColor || 'rgba(10,46,31,.05)'}>{step.step}</StepStyled>
 
@@ -109,16 +109,19 @@ export const HowItWorksSection = () => {
   );
 };
 
-const SectionSwapper = styled(Stack)(() => ({
+const SectionSwapper = styled(Stack)(({theme}) => ({
   width: '100%',
   height: 'auto',
   padding: '88px 40px',
-  backgroundColor: '#fdfcf8'
+  backgroundColor: '#fdfcf8',
+  [theme.breakpoints.down('sm')]: {
+    padding: '88px 20px'
+  }
 }));
 
-const CardSwapper = styled(Stack)(() => ({
-  minHeight: '280px',
-  height: '100%',
+const CardSwapper = styled(Stack)(({theme}) => ({
+  // minHeight: '280px',
+  minHeight: '100%',
   padding: '30px',
   borderRadius: '26px',
   position: 'relative',
@@ -128,7 +131,10 @@ const CardSwapper = styled(Stack)(() => ({
 
   '&:hover': {
     transform: 'translateY(-4px)',
-    boxShadow: '0 8px 48px rgba(10,46,31,.13)'
+    boxShadow: '0 8px 48px rgba(10,46,31,.13)',
+  },
+  [theme.breakpoints.down('sm')]: {
+    height: 'fit-content'
   }
 }));
 

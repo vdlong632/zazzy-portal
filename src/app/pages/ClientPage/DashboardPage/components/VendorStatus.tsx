@@ -15,8 +15,8 @@ const ITEMS = [
 
 export const VendorStatus = () => {
   return (
-    <Stack sx={{ padding: '26px 40px', backgroundColor: '#FDFCF8' }}>
-      <Stack display={'grid'} gridTemplateColumns={'repeat(4,1fr)'} gap={'13px'}>
+    <Swapper>
+      <Statusbadge>
         {ITEMS.map((item) => (
           <CardStyled sx={{ backgroundColor: item.bg || '#EEEEE9' }}>
             <Typography
@@ -36,14 +36,36 @@ export const VendorStatus = () => {
             </Typography>
           </CardStyled>
         ))}
-      </Stack>
-    </Stack>
+      </Statusbadge>
+    </Swapper>
   );
 };
+
+const Swapper = styled(Stack)(({theme}) => ({
+  padding: '26px 40px',
+  backgroundColor: '#FDFCF8',
+  [theme.breakpoints.down('sm')]: {
+    // gridTemplateColumns: 'repeat(1, 1fr)',
+    padding: '26px 20px'
+  }
+}));
 
 const CardStyled = styled(Stack)(() => ({
   padding: '18px',
   // backgroundColor: '#EEEEE9',
   borderRadius: '18px',
   textAlign: 'center'
+}));
+
+const Statusbadge = styled(Stack)(({ theme }) => ({
+  display: 'grid',
+  gridTemplateColumns: 'repeat(4, 1fr)',
+  gap: '13px',
+  [theme.breakpoints.down('md')]: {
+    gridTemplateColumns: 'repeat(2, 1fr)'
+  },
+  [theme.breakpoints.down('sm')]: {
+    gridTemplateColumns: 'repeat(1, 1fr)'
+    // padding: '26px 20px'
+  }
 }));

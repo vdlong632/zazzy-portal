@@ -37,7 +37,7 @@ export const MOCK_LEADS: Leads[] = [
     heatingSystem: 'Gas furnace',
     estimatedCost: 22000,
     tags: ['Heat Pump', 'Solar'],
-    status: 'Closed',
+    status: 'Closed ✓',
     statusDetail: 'Closed May 3 · $2,200 commission'
   },
   {

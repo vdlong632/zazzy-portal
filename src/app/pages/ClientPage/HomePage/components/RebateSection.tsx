@@ -9,7 +9,7 @@ export const RebateSection = ({ rebates }: Props) => {
   // const { rebates, loading, error } = useHomePage();
   return (
     <SectionSwapper id="rebate">
-      <Stack sx={{ margin: '0 40px' }}>
+      <Stack>
         <Typography
           sx={{
             fontSize: '11px',
@@ -42,7 +42,7 @@ export const RebateSection = ({ rebates }: Props) => {
             fontWeight: 300,
             lineHeight: 1.65,
             marginBottom: '48px',
-            width: '45%',
+            maxWidth: '500px',
             fontFamily: 'DM Sans, sans-serif'
           }}>
           We check these every Monday. What you see is what is actually open today.
@@ -50,7 +50,7 @@ export const RebateSection = ({ rebates }: Props) => {
 
         <Grid container spacing={'16px'} alignItems={'stretch'}>
           {rebates.map((item, index) => (
-            <Grid item xs={6} md={4} key={item.id}>
+            <Grid item xs={12} sm={6} md={4} key={item.id}>
               <CardSwapper>
                 {item.jurisdiction === 'Federal' && (
                   <BadgeStyled sx={{ color: '#0C447C', backgroundColor: '#E4F0FA' }}>
@@ -87,8 +87,8 @@ const SectionSwapper = styled(Stack)(({ theme }) => ({
   height: 'auto',
   padding: '88px 40px',
   backgroundColor: '#F7F3EA',
-  [theme.breakpoints.up('xs')]: {
-    padding: '88px 0'
+  [theme.breakpoints.down('sm')]: {
+    padding: '88px 20px'
   }
 }));
 

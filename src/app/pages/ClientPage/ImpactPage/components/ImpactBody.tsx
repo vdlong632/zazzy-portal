@@ -41,29 +41,6 @@ const IMPACT_ITEMS = [
 export const ImpactBody = () => {
   return (
     <BodySwapper>
-      {/* <Stack
-        display={'grid'}
-        gridTemplateColumns={'repeat(4,1fr)'}
-        gap={'13px'}
-        marginBottom={'36px'}>
-        {ITEMS.map((item) => (
-          <CardStyled>
-            <Typography
-              sx={{
-                fontSize: '34px',
-                fontWeight: '800',
-                fontFamily: 'Syne, sans-serif',
-                color: '#0A2E1F',
-                letterSpacing: '-.04em'
-              }}>
-              {item.value}
-            </Typography>
-            <Typography sx={{ fontSize: '11px', color: '#4A5248', marginTop: '3px' }}>
-              {item.detail}
-            </Typography>
-          </CardStyled>
-        ))}
-      </Stack> */}
       <Grid container spacing={'13px'} marginBottom={'36px'}>
         {ITEMS.map((item) => (
           <Grid item xs={6} md={3}>

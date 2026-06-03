@@ -38,3 +38,4 @@ export { ReactComponent as TreatmentIcon } from 'assets/icons/icon_treatment.svg
 export { ReactComponent as TimeLineIcon } from 'assets/icons/icon_time-line.svg';
 export { ReactComponent as ShampooIcon } from 'assets/icons/icon_shampoo.svg';
 export { ReactComponent as IconUp } from 'assets/icons/icon-up.svg';
+export { ReactComponent as MenuButton } from 'assets/icons/menu_button.svg';

@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { Grid, Stack, styled } from '@mui/material';
-import { OTPION_UPGRADES_INTEREST } from '../const';
+import { OPTION_HEATING_SYSTEM, OTPION_UPGRADES_INTEREST } from '../const';
 import { useFormContext } from 'react-hook-form';
 import { TypeMultiForm } from '../type';
 
@@ -12,29 +12,39 @@ export const Step5 = memo(() => {
     setError,
     formState: { errors }
   } = useFormContext<TypeMultiForm>();
-
   return (
     <Stack flex={1} alignItems={'center'}>
       <Stack>
         <Grid container spacing={'10px'}>
           {OTPION_UPGRADES_INTEREST.map((item) => {
             const active = watch('step5.upgrades') || [];
+            //watch all element in step 5
+            const isSelected = active.includes(item.id);
+            //get item active = id
             return (
-              <Grid item xs={12}>
+              <Grid item xs={12} sm={12}>
                 <ItemSwap
                   sx={{
-                    background: active ? '#EAF3DE' : 'transparent',
-                    border: active ? '2px solid #0A2E1F' : '',
+                    background: isSelected ? '#EAF3DE' : '#FDFCF8',
+                    border: isSelected ? '2px solid #0A2E1F' : '',
                     cursor: 'pointer',
                     '&:hover': {
-                      borderColor: '#7B96AD'
+                      borderColor: '#7B96AD',
+                      backgroundColor: '#EAF3DE'
                     }
                   }}
                   onClick={() => {
-                    if (active) {
-                      return;
+                    if (isSelected) {
+                      //if item active
+                      setValue(
+                        'step5.upgrades',
+                        active.filter((id) => id !== item.id)
+                      );
+                      //if item active, filter function will remove array, set new value array
+                    } else {
+                      setValue('step5.upgrades', [...active, item.id]);
+                      //new array, add new item active
                     }
-                    setValue('step5.upgrades', []);
                     setError('step5.upgrades', {
                       type: 'required',
                       message: ''
@@ -65,10 +75,14 @@ const ItemSwap = styled(Stack)(() => ({
   alignItems: 'center',
   gap: '10px',
   padding: '14px 16px',
-  // backgroundColor: '#FDFCF8',
-  // border: '2px solid #E5DFC8',
+  backgroundColor: '#FDFCF8',
+  border: '2px solid #E5DFC8',
   borderRadius: '18px',
   cursor: 'pointer',
   transition: 'all .18s',
-  textAlign: 'left'
+  textAlign: 'left',
+  '&:hover': {
+    borderColor: '#7B96AD',
+    backgroundColor: '#EAF3DE'
+  }
 }));

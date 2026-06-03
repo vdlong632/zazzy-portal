@@ -1,4 +1,4 @@
-export type LeadStatus = 'New Lead' | 'Claimed' | 'Closed';
+export type LeadStatus = 'New Lead' | 'Claimed' | 'Closed ✓';
 
 export interface Leads {
   id: string;

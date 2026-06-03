@@ -13,7 +13,11 @@ export const NavbarMenu = () => {
         return (
           <NavLink key={index} to={item.link} style={{ textDecoration: 'none' }}>
             <MenuItem className={isActive ? 'active' : ''}>
-              <Typography className="label">{item.label}</Typography>
+              <Typography
+                className="label"
+                sx={{ fontFamily: 'DM Sans, sans-serif', fontSize: '13px', fontWeight: 500 }}>
+                {item.label}
+              </Typography>
             </MenuItem>
           </NavLink>
         );
@@ -33,7 +37,7 @@ const MenuItem = styled(Stack)(() => ({
   alignItems: 'center',
   justifyContent: 'center',
   cursor: 'pointer',
-  fontFamily: 'DM Sans, sans-serif',
+  // fontFamily: 'DM Sans, sans-serif',
   fontWeight: 500,
   transition: 'color .2s',
 

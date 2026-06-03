@@ -31,7 +31,7 @@ export const MultiForm = z
       });
     };
     if (data.step >= 1) {
-      if (data.step1.buildingType) addRequired('Building type', ['step1', 'buildingType']);
+      if (!data.step1.buildingType) addRequired('Building type', ['step1', 'buildingType']);
     }
     // if (data.step >= 2) {
     //   const timeContruct = data.step2.timeContructed;

@@ -19,14 +19,15 @@ export const Step2 = memo(() => {
           {OPTION_BUILDING_CONTRUCTED.map((item) => {
             const active = watch('step2.timeContructed') === item.id;
             return (
-              <Grid item xs={6}>
+              <Grid item xs={12} sm={6}>
                 <ItemSwap
                   sx={{
-                    background: active ? '#EAF3DE' : 'transparent',
+                    background: active ? '#EAF3DE' : '#FDFCF8',
                     border: active ? '2px solid #0A2E1F' : '',
                     cursor: 'pointer',
                     '&:hover': {
-                      borderColor: '#7B96AD'
+                      borderColor: '#7B96AD',
+                      backgroundColor: '#EAF3DE'
                     }
                   }}
                   onClick={() => {
@@ -69,5 +70,9 @@ const ItemSwap = styled(Stack)(() => ({
   borderRadius: '18px',
   cursor: 'pointer',
   transition: 'all .18s',
-  textAlign: 'left'
+  textAlign: 'left',
+  '&:hover': {
+    borderColor: '#7B96AD',
+    backgroundColor: '#EAF3DE'
+  }
 }));

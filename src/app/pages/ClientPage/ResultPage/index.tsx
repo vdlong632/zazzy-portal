@@ -1,4 +1,4 @@
-import { Grid, Stack } from '@mui/material';
+import { Grid, Stack, styled } from '@mui/material';
 import { HeroSection } from './components/HeroSection';
 import { ResultSection } from './components/ResultSection';
 import { MatchedVendor } from './components/MatchedVendor';
@@ -8,23 +8,31 @@ export const ResultPage = () => {
   return (
     <Stack bgcolor={'#EEEEE9'}>
       <HeroSection />
-      <Grid container spacing={'28px'} sx={{ padding: '44px 40px' }}>
-        <Grid item xs={6} md={7.5}>
-          <ResultSection />
-        </Grid>
-        <Grid item xs={6} md={4.5}>
+      <Swapper>
+        <ResultSection />
+        <Stack>
           <MatchedVendor />
           <InformationForm />
-        </Grid>
-      </Grid>
+        </Stack>
+      </Swapper>
     </Stack>
   );
 };
 
-// sx={{
-//   margin: '0 90.5px',
-//   padding: '44px 40px',
-//   display: 'grid',
-//   gridTemplateColumns: '2fr 1fr',
-//   gap: '28px'
-// }}>
+const Swapper = styled(Stack)(({ theme }) => ({
+  display: 'grid',
+  gridTemplateColumns: '1fr 370px',
+  // flexDirection: 'row',
+  gap: '28px',
+  padding: '44px 40px',
+  maxWidth: '1100px',
+  margin: '0 auto',
+  [theme.breakpoints.down('md')]: {
+    display: 'grid',
+    gridTemplateColumns: '1fr'
+  },
+  [theme.breakpoints.down('sm')]: {
+    gridTemplateColumns: '1fr',
+    padding: '44px 20px'
+  }
+}));

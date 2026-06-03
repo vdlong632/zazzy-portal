@@ -11,7 +11,7 @@ export const Footer = () => {
           marginBottom: '44px',
           borderBottom: '1px solid rgba(247,243,234,.06)'
         }}>
-        <Grid item xs={6} md={4.8}>
+        <Grid item xs={12} sm={6} md={4.8}>
           <Stack display={'flex'} flexDirection={'row'} gap={'9px'} alignItems={'center'}>
             <Box
               width="32px"
@@ -50,21 +50,21 @@ export const Footer = () => {
             money. Vendors build business. Calgary first, Canada next.
           </Typography>
         </Grid>
-        <Grid item xs={6} md={2.4}>
+        <Grid item xs={12} sm={6} md={2.4}>
           <HeadingTitle>Homeowners</HeadingTitle>
           <ItemStyled href="">Free Rebate Lookup</ItemStyled>
           <ItemStyled href="">How It Works</ItemStyled>
           <ItemStyled href="">2026 Programmes</ItemStyled>
           <ItemStyled href="">Impact Dashboard</ItemStyled>
         </Grid>
-        <Grid item xs={6} md={2.4}>
+        <Grid item xs={12} sm={6} md={2.4}>
           <HeadingTitle>Vendors</HeadingTitle>
           <ItemStyled href="">Vendor Directory</ItemStyled>
           <ItemStyled href="">Vendor Login</ItemStyled>
           <ItemStyled href="">Join the Network</ItemStyled>
           <ItemStyled href="">$399/mo Plans</ItemStyled>
         </Grid>
-        <Grid item xs={6} md={2.4}>
+        <Grid item xs={12} sm={6} md={2.4}>
           <HeadingTitle>Company</HeadingTitle>
           <ItemStyled href="">About</ItemStyled>
           <ItemStyled href="">Press</ItemStyled>
@@ -89,19 +89,6 @@ const FooterSwagger = styled(Stack)(() => ({
   backgroundColor: '#0a2e1f'
 }));
 
-// const FooterItem = styled(Stack)(({ theme }) => ({
-//   display: 'grid',
-//   gridTemplateColumns: '2fr 1fr 1fr 1fr',
-//   gap: '36px',
-//   maxWidth: '1200px',
-//   margin: '0 0.5px 44px',
-//   paddingBottom: '44px',
-//   borderBottom: '1px solid rgba(247, 243, 234, .06)',
-//   [theme.breakpoints.up('md')]: {
-//     display: 'grid',
-//     gridTemplateColumns: '2 fr',
-//   }
-// }));
 
 const HeadingTitle = styled(Typography)(() => ({
   fontSize: '12px',
@@ -128,14 +115,17 @@ const ItemStyled = styled('a')(() => ({
   }
 }));
 
-const FooterBottom = styled(Box)(() => ({
+const FooterBottom = styled(Box)(({theme}) => ({
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
   justifyContent: 'space-between',
   maxWidth: '1200px',
   fontSize: '12px',
-  color: 'rgba(247,243,234,.22)'
+  color: 'rgba(247,243,234,.22)',
+  [theme.breakpoints.down('sm')] : {
+    flexDirection: 'column'
+  }
 }));
 
 const TextBottom = styled(Typography)(() => ({
