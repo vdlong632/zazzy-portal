@@ -80,7 +80,7 @@ export const ButtonOutLine: FC<CustomButtonProps> = ({
 };
 const PrimaryButtonStyled = styled(SubmitButton, {
   shouldForwardProp: (prop) => !String(prop).startsWith('$')
-})<{ $buttonDelete?: boolean; $buttonSecondary?: boolean; }>(
+})<{ $buttonDelete?: boolean; $buttonSecondary?: boolean }>(
   ({ theme, $buttonDelete, $buttonSecondary }) => ({
     borderRadius: 10,
     padding: '0 20px',

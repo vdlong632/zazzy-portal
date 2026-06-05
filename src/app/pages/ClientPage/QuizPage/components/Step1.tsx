@@ -22,7 +22,8 @@ export const Step1 = memo(() => {
             // console.log('abc', active)
             return (
               <Grid item xs={12} sm={6}>
-                <ItemSwap key={item.id}
+                <ItemSwap
+                  key={item.id}
                   sx={{
                     background: active ? '#EAF3DE' : '#FDFCF8',
                     border: active ? '2px solid #0A2E1F' : '',
