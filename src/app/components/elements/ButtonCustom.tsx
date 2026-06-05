@@ -80,24 +80,18 @@ export const ButtonOutLine: FC<CustomButtonProps> = ({
 };
 const PrimaryButtonStyled = styled(SubmitButton, {
   shouldForwardProp: (prop) => !String(prop).startsWith('$')
-})<{ $buttonDelete?: boolean; $buttonSecondary?: boolean; isForm?: boolean }>(
-  ({ theme, $buttonDelete, $buttonSecondary, isForm }) => ({
+})<{ $buttonDelete?: boolean; $buttonSecondary?: boolean; }>(
+  ({ theme, $buttonDelete, $buttonSecondary }) => ({
     borderRadius: 10,
     padding: '0 20px',
     fontWeight: 700,
     width: '100%',
     whiteSpace: 'nowrap',
-    // color: isForm ? '#0A2E1F' : '#C6F135',
-    backgroundColor: isForm ? '#C6F135' : '#0A2E1F',
+    backgroundColor: '#0A2E1F',
     '&:hover': {
-      // color: isForm ? '#1B5E3B' : '#C6F135',
-      backgroundColor: isForm ? '#C6F135' : '#1B5E3B',
-      transform: isForm ? 'translateY(-2px)' : 'translateY(-1px)',
-      boxShadow: isForm ? '0 6px 24px rgba(191, 241, 53, 0.35)' : '0 4px 20px rgba(10,46,31,.25)',
-      '& .MuiTypography-root': {
-        color: isForm ? '#0A2E1F' : '#C6F135'
-        // backgroundColor: isForm ? '#C6F135' : '#0A2E1F',
-      }
+      backgroundColor: '#1B5E3B',
+      transform: 'translateY(-1px)',
+      boxShadow: '0 4px 20px rgba(10,46,31,.25)'
     },
     '&.Mui-disabled': {
       opacity: 0.6

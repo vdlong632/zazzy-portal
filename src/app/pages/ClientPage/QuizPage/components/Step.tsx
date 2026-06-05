@@ -7,7 +7,7 @@ type Props = {
 };
 export const Step = ({ step, totalStep }: Props) => {
   const progress = Math.ceil((step / totalStep) * 100);
-  console.log(step);
+  // console.log(step);
   return (
     <Stack>
       <Stack

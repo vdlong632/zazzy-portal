@@ -2,12 +2,10 @@ import { Box, Button, Stack, styled, Typography } from '@mui/material';
 import { ButtonCustom } from 'app/components/elements/ButtonCustom';
 import { InputText } from 'app/components/elements/InputText';
 import { useNavigate } from 'react-router-dom';
+import { useHomePage } from '../hook';
 
 export const LookupBox = () => {
-  const navigate = useNavigate();
-  const onSubmitLookup = () => {
-    navigate('/quiz');
-  };
+  const { postalCode, handleSubmit, handleInputChange } = useHomePage();
   return (
     <LookupBoxSwapper>
       <TitleStyled>Building Rebate Lookup Engine</TitleStyled>
@@ -32,10 +30,15 @@ export const LookupBox = () => {
         <InputText
           isLookUp
           placeholder="e.g. T2P 1J9 or T3G 4R2"
-          maxLength={7}
+          maxLength={15}
           sx={{ minHeight: '53px', flex: 1, fontSize: '16px', fontWeight: 500 }}
+          inputProps={{
+            value: postalCode,
+            onChange: handleInputChange
+          }}
         />
         <ButtonCustom
+          onClick={handleSubmit}
           label="Look Up Rebates →"
           sx={{
             borderRadius: '18px',

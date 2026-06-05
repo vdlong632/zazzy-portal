@@ -4,14 +4,11 @@ import { FormProvider } from 'react-hook-form';
 import { InputText } from 'app/components/elements/InputText';
 import { ButtonCustom } from 'app/components/elements/ButtonCustom';
 
-type FormProps = {
-  disabled?: boolean;
-};
-export const InformationForm = ({ disabled = false }: FormProps) => {
+export const InformationForm = () => {
   const { methods } = useInformationForm();
   return (
     <FormProvider {...methods}>
-      <Stack bgcolor={'#0A2E1F'} padding={'22px'} borderRadius={'26px'}>
+      <Stack bgcolor={'#0A2E1F'} padding={'22px'} borderRadius={'26px'} flexShrink={1}>
         <HeadingForm>Claim Your Report</HeadingForm>
         <SubTitle>
           Enter your details to receive your full report and get connected with your 3 matched
@@ -27,7 +24,15 @@ export const InformationForm = ({ disabled = false }: FormProps) => {
         <ButtonCustom
           isForm
           label="Get My Report and Vendor Matches →"
-          sx={{ height: '39px', borderRadius: '100px', backgroundColor: '#C6F135' }}
+          sx={{
+            '&:hover': {
+              backgroundColor: '#C6F135',
+              color: '#0A2E1F'
+            },
+            height: '39px',
+            borderRadius: '100px',
+            backgroundColor: '#C6F135'
+          }}
           textSx={{ color: '#0A2E1F', fontFamily: 'Syne, sans-serif', fontSize: '14px' }}
         />
       </Stack>

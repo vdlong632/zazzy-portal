@@ -22,7 +22,6 @@ export const ResultPage = () => {
 const Swapper = styled(Stack)(({ theme }) => ({
   display: 'grid',
   gridTemplateColumns: '1fr 370px',
-  // flexDirection: 'row',
   gap: '28px',
   padding: '44px 40px',
   maxWidth: '1100px',

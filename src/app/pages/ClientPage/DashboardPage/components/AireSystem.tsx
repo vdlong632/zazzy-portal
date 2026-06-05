@@ -30,10 +30,25 @@ export const AireSystem = () => {
       <Stack display={'flex'} flexDirection={'row'} alignItems={'center'} gap={'7px'}>
         <ButtonOutLine
           label="Back To Site"
-          textSx={{ color: 'rgba(247,243,234,.65)' }}
+          textSx={{
+            fontSize: '13px',
+            fontWeight: 600,
+            color: 'rgba(247,243,234,.65)',
+            lineHeight: 1.3
+          }}
           onClick={() => navigate('/')}
+          sx={{ padding: '8px 18px', border: '1.5px solid rgba(247,243,234,.18)' }}
         />
-        <ButtonOutLine label="Sign Out" textSx={{ color: 'rgba(247,243,234,.65)' }} />
+        <ButtonOutLine
+          label="Sign Out"
+          textSx={{
+            fontSize: '13px',
+            fontWeight: 600,
+            color: 'rgba(247,243,234,.65)',
+            lineHeight: 1.3
+          }}
+          sx={{ padding: '8px 18px', border: '1.5px solid rgba(247,243,234,.18)' }}
+        />
       </Stack>
     </WrapStyled>
   );

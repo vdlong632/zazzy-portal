@@ -26,9 +26,12 @@ export const VectorGridSection = ({ vendors }: Props) => {
                 <LogoStyled>{item.logo}</LogoStyled>
 
                 <Stack alignItems="flex-end" gap="3px">
-                  {item.badges.map((badge) => (
-                    <BadgeStyled>{badge}</BadgeStyled>
-                  ))}
+                  {item.badges.map(
+                    (badge) =>
+                      (badge === 'NRCan ✓' && <BadgeStyled sx={{color: '#1B5E3B', backgroundColor: '#EAF3DE'}}>{badge}</BadgeStyled>) ||
+                      (badge === 'ENMAX Partner' && <BadgeStyled sx={{color: '#0C447C', backgroundColor: '#E4F0FA'}}>{badge}</BadgeStyled>) ||
+                      (badge === 'CMHC Approved' && <BadgeStyled sx={{color: '#633806', backgroundColor: '#FDF0D5'}}>{badge}</BadgeStyled>)
+                  )}
                 </Stack>
               </Stack>
 
@@ -120,7 +123,7 @@ export const VectorGridSection = ({ vendors }: Props) => {
         ))}
 
         <Grid item xs={12} sm={6} md={4} display="flex">
-          <CardStyled
+          <CardStyled id='calgary'
             sx={{
               backgroundColor: '#EEEEE9',
               border: '1.5px dashed #E5DFC8',
@@ -198,7 +201,12 @@ const CardStyled = styled(Stack)(() => ({
   '&:hover': {
     transform: 'translateY(-4px)',
     boxShadow: '0 8px 48px rgba(10,46,31,.13)'
+  },
+  '.calgary:hover': {
+    transform: 'translateY(-3px)',
+    border: '1.5px dashed #4A8C65'
   }
+
 }));
 
 const LogoStyled = styled(Stack)(() => ({

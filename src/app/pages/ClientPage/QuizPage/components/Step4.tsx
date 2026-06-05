@@ -12,33 +12,24 @@ export const Step4 = memo(() => {
     setError,
     formState: { errors }
   } = useFormContext<TypeMultiForm>();
-  console.log(watch('step4.averageBill'));
+  // console.log(watch('step4.averageBill'));
   return (
     <Stack flex={1} alignItems={'center'}>
       <SliderBox>
-        {/* <SliderCustom
-          defaultValue={50}
-          min={50}
-          max={800}
-          step={10}
-          onChange={(value) => {
-            console.log(value);
-          }}
-        /> */}
         <Controller
           control={control}
           name="step4.averageBill"
-          render={({ field }) => (
+          render={({ field, fieldState }) => (
             <SliderCustom
               value={field.value ?? 50}
               defaultValue={50}
               min={50}
               max={800}
               step={10}
-              // value={field.value}
               onChange={(value) => {
                 field.onChange(value);
               }}
+              inputError={fieldState.error?.message}
             />
           )}
         />

@@ -6,6 +6,7 @@ import { useFormContext } from 'react-hook-form';
 
 export const Step1 = memo(() => {
   const {
+    trigger,
     control,
     watch,
     setValue,
@@ -21,7 +22,7 @@ export const Step1 = memo(() => {
             // console.log('abc', active)
             return (
               <Grid item xs={12} sm={6}>
-                <ItemSwap
+                <ItemSwap key={item.id}
                   sx={{
                     background: active ? '#EAF3DE' : '#FDFCF8',
                     border: active ? '2px solid #0A2E1F' : '',
