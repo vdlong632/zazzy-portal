@@ -28,7 +28,7 @@ const Swapper = styled(Stack)(({ theme }) => ({
   margin: '0 auto',
   [theme.breakpoints.down('md')]: {
     display: 'grid',
-    gridTemplateColumns: '1fr'
+    gridTemplateColumns: '1fr 1fr'
   },
   [theme.breakpoints.down('sm')]: {
     gridTemplateColumns: '1fr',

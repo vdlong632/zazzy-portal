@@ -24,6 +24,7 @@ export const Step = ({ step, totalStep }: Props) => {
       </Stack>
       <BarStep>
         <BarFill width={progress}></BarFill>
+        <BarFill width={progress}></BarFill>
       </BarStep>
       <StepTitle>{STEP_FORM?.find((item) => item.value === step)?.label}</StepTitle>
       <StepDesc>{STEP_FORM_DESC?.find((item) => item.value === step)?.label}</StepDesc>

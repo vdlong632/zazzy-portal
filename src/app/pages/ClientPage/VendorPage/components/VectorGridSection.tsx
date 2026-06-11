@@ -1,7 +1,6 @@
-import { Box, CircularProgress, Grid, Stack, styled, Typography } from '@mui/material';
+import { Grid, Stack, styled, Typography } from '@mui/material';
 import { ButtonCustom } from 'app/components/elements/ButtonCustom';
 import { useNavigate } from 'react-router-dom';
-import { useVendorPage } from '../hook';
 import { Vendor } from 'services/vendor';
 
 type Props = {
@@ -9,8 +8,6 @@ type Props = {
 };
 export const VectorGridSection = ({ vendors }: Props) => {
   const navigate = useNavigate();
-
-  // const { vendors, loading, error } = useVendorPage();
 
   return (
     <Swapper>

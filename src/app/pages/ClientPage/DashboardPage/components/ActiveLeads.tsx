@@ -1,4 +1,4 @@
-import { Stack, styled, Typography } from '@mui/material';
+import { Stack, styled, Typography, Box } from '@mui/material';
 import { ButtonCustom, ButtonOutLine } from 'app/components/elements/ButtonCustom';
 import { Leads } from 'services/leads';
 
@@ -37,9 +37,13 @@ export const ActiveLeads = ({ leads }: Props) => {
               <Typography sx={{ fontSize: '14px', fontWeight: 700, color: '#0C0F0D' }}>
                 {item.name}
               </Typography>
-              <Typography sx={{ fontSize: '11px', color: '#4A5248', marginTop: '2px' }}>
-                {item.postalCode}·{item.yearBuilt}·{item.homeType}·{item.neighborhood}·
-                {item.heatingSystem}·{item.estimatedCost}
+              <Typography sx={{ display: 'flex', flexDirection: 'row', gap: '8px', fontSize: '11px', color: '#4A5248' }}>
+                <span>{item.postalCode}</span>
+                <span>{item.yearBuilt}</span>
+                <span>{item.homeType}</span>
+                <span>{item.neighborhood}</span>
+                <span>{item.heatingSystem}</span>
+                <span>{item.estimatedCost}</span>
               </Typography>
             </Stack>
             <Stack display={'flex'} gap="3px" flexWrap={'wrap'}>
@@ -72,7 +76,7 @@ export const ActiveLeads = ({ leads }: Props) => {
               {item.status === 'New Lead' && (
                 <ButtonCustom
                   label="Claim Lead"
-                  textSx={{ fontSize: '11px', fontWeight: 600 }}
+                  textSx={{ color: '#C6F135', fontSize: '11px', fontWeight: 600 }}
                   sx={{ borderRadius: '100px', padding: '7px 14px' }}
                 />
               )}
@@ -80,7 +84,7 @@ export const ActiveLeads = ({ leads }: Props) => {
                 <Stack sx={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                   <ButtonCustom
                     label="Mark Closed"
-                    textSx={{ fontSize: '11px', fontWeight: 600 }}
+                    textSx={{ color: '#C6F135', fontSize: '11px', fontWeight: 600 }}
                     sx={{ borderRadius: '100px', padding: '7px 14px' }}
                   />
                   <ButtonOutLine
@@ -130,7 +134,8 @@ const LeadsItem = styled(Stack)(({ theme }) => ({
 
   [theme.breakpoints.down('sm')]: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    alignItems: 'flex-start'
   },
   [theme.breakpoints.down('md')]: {
     gridTemplateColumns: '1fr 1fr'
