@@ -37,7 +37,14 @@ export const ActiveLeads = ({ leads }: Props) => {
               <Typography sx={{ fontSize: '14px', fontWeight: 700, color: '#0C0F0D' }}>
                 {item.name}
               </Typography>
-              <Typography sx={{ display: 'flex', flexDirection: 'row', gap: '8px', fontSize: '11px', color: '#4A5248' }}>
+              <Typography
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  gap: '8px',
+                  fontSize: '11px',
+                  color: '#4A5248'
+                }}>
                 <span>{item.postalCode}</span>
                 <span>{item.yearBuilt}</span>
                 <span>{item.homeType}</span>
