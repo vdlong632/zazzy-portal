@@ -3,9 +3,10 @@ import { ButtonCustom } from 'app/components/elements/ButtonCustom';
 import { InputText } from 'app/components/elements/InputText';
 import { useNavigate } from 'react-router-dom';
 import { useHomePage } from '../hook';
+import { TextError } from 'app/components/elements/TextError';
 
 export const LookupBox = () => {
-  const { postalCode, handleSubmit, handleInputChange } = useHomePage();
+  const { postalCode, handleSubmit, handleInputChange, error } = useHomePage();
   return (
     <LookupBoxSwapper>
       <TitleStyled>Building Rebate Lookup Engine</TitleStyled>
@@ -48,6 +49,7 @@ export const LookupBox = () => {
           textSx={{ fontSize: '14px', color: '#C6F135', fontFamily: 'Syne, sans-serif' }}
         />
       </Stack>
+      <TextError errorText={`${error}`} />
       <Stack sx={{ display: 'flex', flexDirection: 'row', gap: '18px' }}>
         <LookupTrust>✓ Always free</LookupTrust>
         <LookupTrust>✓ No login needed</LookupTrust>

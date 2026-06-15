@@ -7,9 +7,12 @@ export const HeroSection = () => {
       <HeroContent>
         <HeroPill>2026 Calgary Rebates — Verified May 2026</HeroPill>
 
-        <HeroTitle sx={{ width: '89%', lineHeight: 0.92 }} fontFamily={'Syne, sans-serif'}>
-          Enter your postcode.
+        <HeroTitle sx={{ width: '90%', lineHeight: 0.92 }} fontFamily={'Syne, sans-serif'}>
+          Enter
           <br />
+          your
+          <br />
+          postcode.
           <span>See your rebates.</span>
           <br />
           60 seconds flat.

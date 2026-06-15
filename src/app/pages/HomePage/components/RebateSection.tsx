@@ -6,7 +6,7 @@ type Props = {
   rebates: Rebate[];
 };
 export const RebateSection = ({ rebates }: Props) => {
-  // const { rebates, loading, error } = useHomePage();
+  const { loading, error } = useHomePage();
   return (
     <SectionSwapper id="rebate">
       <Stack>
