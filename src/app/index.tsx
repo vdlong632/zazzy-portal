@@ -1,13 +1,13 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { NavbarLayout } from './components/organisms/NavbarLayout';
-import { HomePage } from './pages/ClientPage/HomePage';
-import { VendorLoginPage } from './pages/ClientPage/VendorLoginPage';
-import { ImpactPage } from './pages/ClientPage/ImpactPage';
-import { VendorPage } from './pages/ClientPage/VendorPage';
-import { Step1 } from './pages/ClientPage/QuizPage/components/Step1';
-import { DashboardPage } from './pages/ClientPage/DashboardPage';
-import { QuizPage } from './pages/ClientPage/QuizPage';
-import { ResultPage } from './pages/ClientPage/ResultPage';
+import { HomePage } from './pages/HomePage';
+import { VendorLoginPage } from './pages/VendorLoginPage';
+import { ImpactPage } from './pages/ImpactPage';
+import { VendorPage } from './pages/VendorPage';
+import { Step1 } from './pages/QuizPage/components/Step1';
+import { DashboardPage } from './pages/DashboardPage';
+import { QuizPage } from './pages/QuizPage';
+import { ResultPage } from './pages/ResultPage';
 
 export default function App() {
   return (
