@@ -16,7 +16,7 @@ export const MultiForm = z
       averageBill: z.number()
     }),
     step5: z.object({
-      upgrades: z.array(z.string()).default([]).optional()
+      upgrades: z.array(z.string())
       // upgrades: z.array(z.string()).default([]),
     }),
     step6: z.object({
@@ -41,7 +41,9 @@ export const MultiForm = z
       if (!data.step3.heatingSystem) addRequired('Heating System', ['step3', 'heatingSystem']);
     }
     if (data.step >= 5) {
-      if (!data.step5.upgrades) addRequired('Upgrades', ['step5', 'upgrades']);
+      if (data.step5.upgrades.length === 0) {
+        addRequired('Upgrades', ['step5', 'upgrades']);
+      }
     }
     if (data.step >= 6) {
       if (!data.step6.buildingSize) addRequired('Building Size', ['step6', 'buildingSize']);

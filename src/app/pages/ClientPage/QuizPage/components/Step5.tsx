@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { Grid, Stack, styled } from '@mui/material';
-import { OPTION_HEATING_SYSTEM, OTPION_UPGRADES_INTEREST } from '../const';
+import { OTPION_UPGRADES_INTEREST } from '../const';
 import { useFormContext } from 'react-hook-form';
 import { TypeMultiForm } from '../type';
 
@@ -18,9 +18,7 @@ export const Step5 = memo(() => {
         <Grid container spacing={'10px'}>
           {OTPION_UPGRADES_INTEREST.map((item) => {
             const active = watch('step5.upgrades') || [];
-            //watch all element in step 5
             const isSelected = active.includes(item.id);
-            //get item active = id
             return (
               <Grid item xs={12} sm={12}>
                 <ItemSwap
@@ -35,15 +33,12 @@ export const Step5 = memo(() => {
                   }}
                   onClick={() => {
                     if (isSelected) {
-                      //if item active
                       setValue(
                         'step5.upgrades',
                         active.filter((id) => id !== item.id)
                       );
-                      //if item active, filter function will remove array, set new value array
                     } else {
                       setValue('step5.upgrades', [...active, item.id]);
-                      //new array, add new item active
                     }
                     setError('step5.upgrades', {
                       type: 'required',

@@ -1,5 +1,5 @@
 import { FormControl, Slider, Stack, styled, SxProps, Theme, Typography } from '@mui/material';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 interface SliderCustomProps {
   title?: string;
@@ -18,7 +18,8 @@ interface SliderCustomProps {
 export const SliderCustom = ({
   title,
   label = '/mo',
-  defaultValue = 50,
+  defaultValue,
+  value: controlledValue,
   step,
   min,
   max,
@@ -26,7 +27,7 @@ export const SliderCustom = ({
   sx,
   inputError
 }: SliderCustomProps) => {
-  const [value, setValue] = useState(defaultValue);
+  const [value, setValue] = useState(controlledValue ?? defaultValue);
 
   const handleChange = (_event: Event, newValue: number | number[]) => {
     const nextValue = newValue as number;

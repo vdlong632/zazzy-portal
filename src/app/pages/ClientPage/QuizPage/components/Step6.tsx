@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { Grid, Stack, styled, Typography } from '@mui/material';
+import { Grid, Stack, styled } from '@mui/material';
 import { OPTION_BUILDING_SIZE } from '../const';
 import { useFormContext } from 'react-hook-form';
 import { TypeMultiForm } from '../type';

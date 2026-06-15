@@ -5,23 +5,16 @@ import { Controller, useFormContext } from 'react-hook-form';
 import { TypeMultiForm } from '../type';
 
 export const Step4 = memo(() => {
-  const {
-    control,
-    watch,
-    setValue,
-    setError,
-    formState: { errors }
-  } = useFormContext<TypeMultiForm>();
-  // console.log(watch('step4.averageBill'));
+  const { control } = useFormContext<TypeMultiForm>();
   return (
-    <Stack flex={1} alignItems={'center'}>
+    <Stack flex={1} alignItems="center">
       <SliderBox>
         <Controller
           control={control}
           name="step4.averageBill"
           render={({ field, fieldState }) => (
             <SliderCustom
-              value={field.value ?? 50}
+              value={field.value}
               defaultValue={50}
               min={50}
               max={800}

@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { Grid, Stack, styled } from '@mui/material';
+import { Grid, Stack, styled, Typography } from '@mui/material';
 import { OPTION_BUILDING_TYPE } from '../const';
 import { TypeMultiForm } from '../type';
 import { useFormContext } from 'react-hook-form';
@@ -38,10 +38,11 @@ export const Step1 = memo(() => {
                       return;
                     }
                     setValue('step1.buildingType', item.id);
-                    setError('step1.buildingType', {
-                      type: 'required',
-                      message: ''
-                    });
+                    // setError('step1.buildingType', {
+                    //   type: 'required',
+                    //   message: ''
+                    // });
+                    trigger('step1.buildingType');
                   }}>
                   <Stack sx={{ fontSize: '22px', flexShrink: 0 }}>{item.icon}</Stack>
                   <Stack>
@@ -57,6 +58,9 @@ export const Step1 = memo(() => {
             );
           })}
         </Grid>
+        {errors.step1?.buildingType && (
+          <Typography>{errors?.step1.buildingType.message}</Typography>
+        )}
       </Stack>
     </Stack>
   );
