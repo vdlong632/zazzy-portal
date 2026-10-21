@@ -28,7 +28,7 @@ export const ActiveLeads = ({ leads }: Props) => {
           }}>
           Active Leads
         </Typography>
-        <Typography>Select</Typography>
+        <Typography>Selected</Typography>
       </Stack>
       <LeadsSwap>
         {leads.map((item) => (
